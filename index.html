@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KitKarl - small useful software</title>
+<meta name="description" content="I'm Karl. I make small desktop apps that do one job each and get out of the way: Video Squisher, Image Squisher, EdgePOP. Free to use, no subscriptions.">
+<link rel="icon" type="image/png" href="assets/kklogo.png">
+<link rel="canonical" href="https://kitkarl-git.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KitKarl">
+<meta property="og:title" content="KitKarl - small useful software">
+<meta property="og:description" content="Small desktop apps that do one job each: Video Squisher, Image Squisher, EdgePOP. Free to use, no subscriptions.">
+<meta property="og:url" content="https://kitkarl-git.github.io/">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    --bg: #FAF5EF; --card: #FFFFFF; --text: #3D3733;
+    --accent: #2A9D8F; --accent-hi: #21867A; --tint: #E4F2F0;
+    --muted: #7A716A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #23201D; --card: #2C2825; --text: #EDE7E0;
+      --accent: #3AB8A8; --accent-hi: #2A9D8F; --tint: #31423F;
+      --muted: #A79E96;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  header { text-align: center; padding: 56px 20px 32px; }
+  header img.logo { width: 88px; height: 88px; border-radius: 20px; }
+  h1 { font-size: 1.05rem; font-weight: 400; color: var(--muted); margin: 14px 0 6px; letter-spacing: .5px; }
+  h2.hero { font-size: 2.4rem; line-height: 1.2; margin: 0 0 14px; }
+  p.sub { font-size: 1.15rem; color: var(--muted); max-width: 620px; margin: 0 auto; }
+  section { padding: 24px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 18px; }
+  @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border-radius: 14px; padding: 24px; }
+  .card .top { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+  .card img.appicon { width: 56px; height: 56px; border-radius: 12px; }
+  .card h3 { margin: 0; font-size: 1.25rem; }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: .95rem; }
+  .card .links { display: flex; gap: 8px 18px; flex-wrap: wrap; }
+  .card a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: .95rem; }
+  .card a:hover { text-decoration: underline; }
+  .price { display: inline-block; background: var(--tint); color: var(--accent); border-radius: 999px; padding: 1px 10px; font-size: .8rem; font-weight: 600; margin-left: 8px; vertical-align: middle; }
+  .about { background: var(--card); border-radius: 14px; padding: 24px; color: var(--muted); }
+  .about p { margin: 0; }
+  .about a { color: var(--accent); }
+  footer { text-align: center; padding: 40px 20px 56px; color: var(--muted); font-size: .9rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="assets/kklogo.png" alt="KitKarl logo">
+  <h1>KITKARL</h1>
+  <h2 class="hero">Small, useful software.</h2>
+  <p class="sub">I'm Karl. I write little desktop apps that do one job each
+  and then get out of the way. Free to use, cheap to keep, no
+  subscriptions.</p>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><img class="appicon" src="assets/vs-icon.png" alt="">
+        <h3>Video Squisher</h3></div>
+      <p>Makes video files smaller without making them look worse. You pick
+      the quality in plain words, it finds the smallest file that passes.
+      Free does 5 videos a day.<span class="price">Pro $29.99 once</span></p>
+      <div class="links">
+        <a href="/videosquisher/">product page</a>
+        <a href="https://download.kitkarl.com">download</a>
+        <a href="https://github.com/KitKarl-git/videosquisher/releases">releases</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><img class="appicon" src="assets/isq-icon.png" alt="">
+        <h3>Image Squisher</h3></div>
+      <p>The same trick for photos. JPG, HEIC, PNG and camera RAW, shrunk
+      to a fraction of the size on your own computer. Free does 10 photos
+      a day.<span class="price">Pro $9 once</span></p>
+      <div class="links">
+        <a href="/imagesquisher/">product page</a>
+        <a href="https://kitkarl.com/imagesquisher/">site</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><img class="appicon" src="assets/edgepop.webp" alt="">
+        <h3>EdgePOP</h3></div>
+      <p>Hover the seam between two monitors and see the windows on the
+      other screen. Click one and you're there. Free, about 2 MB, Windows
+      10/11.</p>
+      <div class="links">
+        <a href="https://github.com/KitKarl-git/EdgePop">source + download</a>
+        <a href="https://kitkarl.com/edgepop/">site</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><h3>marketopen widget</h3></div>
+      <p>A one-page widget that tells you if the New York Stock Exchange is
+      open right now, or when it opens next. I kept checking the clock, so
+      now the page does it for me.</p>
+      <div class="links">
+        <a href="https://github.com/KitKarl-git/marketopen-widget">repo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="about">
+    <p>Everything above is made by one person. No ads, no accounts, no
+    telemetry in any of it, and nothing you feed these apps ever leaves
+    your machine. The squishers have free tiers that stay free; Pro is a
+    one-time purchase when you want the limits off. If any of this saved
+    you some time or disk space, <a href="https://kitkarl.com/donate/">a
+    coffee is always appreeciated</a>.</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Karl · <a href="https://kitkarl.com">kitkarl.com</a> · support@kitkarl.com
+</footer>
+
+</body>
+</html>
