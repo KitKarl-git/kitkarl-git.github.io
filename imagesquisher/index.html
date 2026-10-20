@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Squisher by KitKarl - smaller photos that still look right</title>
+<meta name="description" content="Free desktop app that shrinks JPG, HEIC, PNG and camera RAW photos to a fraction of the size, on your own computer. You pick the quality, it finds the smallest file that passes.">
+<link rel="icon" type="image/png" href="../assets/isq-icon.png">
+<link rel="canonical" href="https://kitkarl.com/imagesquisher/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Image Squisher by KitKarl">
+<meta property="og:title" content="Image Squisher by KitKarl">
+<meta property="og:description" content="Shrink JPG, HEIC, PNG and RAW photos to a fraction of the size, on your own computer. Free on Windows, macOS and Linux.">
+<meta property="og:url" content="https://kitkarl-git.github.io/imagesquisher/">
+<meta property="og:image" content="https://kitkarl-git.github.io/imagesquisher/slider.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --bg: #FAF5EF; --card: #FFFFFF; --text: #3D3733;
+    --accent: #2A9D8F; --accent-hi: #21867A; --tint: #E4F2F0;
+    --muted: #7A716A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #23201D; --card: #2C2825; --text: #EDE7E0;
+      --accent: #3AB8A8; --accent-hi: #2A9D8F; --tint: #31423F;
+      --muted: #A79E96;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  header { text-align: center; padding: 56px 20px 32px; }
+  header img.logo { width: 96px; height: 96px; border-radius: 20px; }
+  h1 { font-size: 1.05rem; font-weight: 400; color: var(--muted); margin: 14px 0 6px; letter-spacing: .5px; }
+  h2.hero { font-size: 2.4rem; line-height: 1.2; margin: 0 0 14px; }
+  p.sub { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 12px;
+    font-weight: 600; text-decoration: none; font-size: 1.05rem;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-hi); }
+  .fineprint { font-size: .9rem; color: var(--muted); margin-top: 14px; }
+  section { padding: 40px 0; }
+  h3.sec { font-size: 1.5rem; margin: 0 0 22px; text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border-radius: 14px; padding: 22px; }
+  .card h4 { margin: 0 0 8px; font-size: 1.05rem; color: var(--accent); }
+  .card p { margin: 0; font-size: .95rem; color: var(--muted); }
+  .shot { width: 100%; border-radius: 12px; display: block; }
+  table.compare { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 14px; overflow: hidden; }
+  table.compare th, table.compare td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--tint); }
+  table.compare th { background: var(--tint); }
+  table.compare tr:last-child td { border-bottom: none; }
+  .pill { display: inline-block; background: var(--tint); color: var(--accent); border-radius: 999px; padding: 2px 12px; font-size: .85rem; font-weight: 600; }
+  ul.trust { list-style: none; padding: 0; margin: 0; }
+  ul.trust li { padding: 6px 0; }
+  ul.trust li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+  footer { text-align: center; padding: 40px 20px 56px; color: var(--muted); font-size: .9rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="../assets/isq-icon.png" alt="Image Squisher logo">
+  <h1>IMAGE SQUISHER BY KITKARL</h1>
+  <h2 class="hero">Smaller photos.<br>Same photo.</h2>
+  <p class="sub">Drop photos in, get much smaller ones back. You pick the
+  quality in plain words, it finds the smallest file that still looks
+  right.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://kitkarl.com/imagesquisher/">Download free</a>
+  </div>
+  <p class="fineprint">Free does 10 photos a day, whole batches included, no
+  account. Windows · macOS · Linux.</p>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h3 class="sec">What it does</h3>
+  <div class="grid">
+    <div class="card"><h4>Eats almost anything</h4>
+      <p>JPG, PNG, WebP, HEIC from iPhones, and camera RAW files from about
+      a thousand different cameras.</p></div>
+    <div class="card"><h4>A word, not a number</h4>
+      <p>Same idea as Video Squisher: say how the photo should look and it
+      finds the smallest file that passes. No quality sliders with
+      mysterious percentages.</p></div>
+    <div class="card"><h4>Plays nice everywhere</h4>
+      <p>Default output is small modern files. Flip "more compatible" and
+      you get plain JPG or PNG that opens on literally anything.</p></div>
+    <div class="card"><h4>Never bigger</h4>
+      <p>If a photo can't be made smaller without looking worse, it tells
+      you and leaves it alone.</p></div>
+    <div class="card"><h4>Cleans up after itself</h4>
+      <p>Optional: strip the personal data (camera, GPS, timestamps) out of
+      the copies while squishing. Transparency is preserved too.</p></div>
+    <div class="card"><h4>Stays on your machine</h4>
+      <p>No uploads, no accounts, no telemetry. Photos never leave your
+      computer.</p></div>
+  </div>
+</section>
+
+<section>
+  <h3 class="sec">The app</h3>
+  <img class="shot" src="slider.jpg" alt="Image Squisher main window">
+</section>
+
+<section>
+  <h3 class="sec">Free vs Pro</h3>
+  <table class="compare">
+    <tr><th></th><th>Free</th><th><span class="pill">Pro - $9 once</span></th></tr>
+    <tr><td>Photos per day</td><td>10</td><td>Unlimited</td></tr>
+    <tr><td>Whole batches</td><td>✓</td><td>✓</td></tr>
+    <tr><td>Watch folder</td><td></td><td>✓</td></tr>
+    <tr><td>Custom output names</td><td></td><td>✓</td></tr>
+    <tr><td>Everything else (quality engine, formats)</td><td>✓</td><td>✓</td></tr>
+  </table>
+  <p class="fineprint" style="text-align:center">One purchase, yours forever.
+  No subscription.</p>
+</section>
+
+<section style="text-align:center">
+  <a class="btn btn-primary" href="https://kitkarl.com/imagesquisher/">Download free</a>
+</section>
+
+</div>
+
+<footer>
+  Image Squisher by KitKarl · <a href="https://kitkarl.com/imagesquisher/">kitkarl.com/imagesquisher</a><br>
+  Part of the squisher family: <a href="/videosquisher/">Video Squisher</a>
+  does the same job for video files.
+</footer>
+
+</body>
+</html>
